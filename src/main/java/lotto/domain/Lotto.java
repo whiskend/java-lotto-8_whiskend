@@ -35,22 +35,24 @@ public class Lotto {
             }
         }
     }
-        public List<Integer> getNumbers() {
-            return numbers;
-        }
 
-        // 당첨 번호와의 일치 개수 계산
-        public int countMatches (Set < Integer > winning) {
-            int cnt = 0;
-            for (Integer n : numbers) {
-                if (winning.contains(n)) {
-                    cnt++;
-                }
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
+
+    // 당첨 번호와의 일치 개수 계산
+    public int countMatches (Set < Integer > winning) {
+        int cnt = 0;
+        for (Integer n : numbers) {
+            if (winning.contains(n)) {
+                cnt++;
             }
-            return cnt;
         }
-        // 특정 숫자 포함 여부(보너스 매칭 확인용)
-        public boolean contains ( int n){
-            return numbers.contains(n);
-        }
+        return cnt;
+    }
+
+    // 특정 숫자 포함 여부(보너스 매칭 확인용)
+    public boolean contains ( int n){
+        return numbers.contains(n);
+    }
 }
